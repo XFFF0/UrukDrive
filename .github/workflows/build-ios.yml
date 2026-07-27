@@ -22,10 +22,18 @@ jobs:
       - name: Select Xcode 16
         run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
-      - name: Install iOS platform SDK
+      - name: Diagnose available Xcode/SDKs
         run: |
-          xcodebuild -downloadPlatform iOS
-          xcodebuild -showsdks
+          echo "=== /Applications Xcode installs ===" | tee /tmp/diag.log
+          ls /Applications | grep -i xcode | tee -a /tmp/diag.log
+          echo "=== xcodebuild -version ===" | tee -a /tmp/diag.log
+          xcodebuild -version | tee -a /tmp/diag.log
+          echo "=== xcodebuild -showsdks ===" | tee -a /tmp/diag.log
+          xcodebuild -showsdks | tee -a /tmp/diag.log
+          echo "=== available runtimes/platforms ===" | tee -a /tmp/diag.log
+          xcrun simctl list runtimes | tee -a /tmp/diag.log
+          mkdir -p build
+          cp /tmp/diag.log build/diag.log
 
       - name: Cache Godot editor + export templates
         id: godot-cache
@@ -90,10 +98,11 @@ jobs:
           mkdir -p /tmp/logbranch
           cp build/import.log /tmp/logbranch/ 2>/dev/null || echo "no import.log" > /tmp/logbranch/import.log
           cp build/export.log /tmp/logbranch/ 2>/dev/null || echo "no export.log" > /tmp/logbranch/export.log
+          cp build/diag.log /tmp/logbranch/ 2>/dev/null || echo "no diag.log" > /tmp/logbranch/diag.log
           echo "Build run: $GITHUB_RUN_ID at $(date -u)" > /tmp/logbranch/build-log.txt
           git checkout --orphan "$BRANCH"
           git rm -rf . > /dev/null 2>&1 || true
           cp /tmp/logbranch/* .
-          git add build-log.txt import.log export.log
+          git add build-log.txt import.log export.log diag.log
           git -c user.name="ci-bot" -c user.email="ci@local" commit -m "Build log ${GITHUB_RUN_ID}"
           git push origin HEAD:refs/heads/"$BRANCH" || true
