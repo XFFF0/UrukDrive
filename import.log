@@ -1,0 +1,45 @@
+Resolved GODOT_BIN=/Users/runner/godot-editor/Godot.app/Contents/MacOS/Godot
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/camera_rig.gd:23)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/camera_rig.gd:24)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/camera_rig.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/player.gd:17)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/player.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:20)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:39)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:40)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:44)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:52)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:53)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:57)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:60)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:61)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/touch_controls.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/vehicle.gd:22)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/vehicle.gd:23)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/vehicle.gd:24)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/vehicle.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Identifier "InputState" not declared in the current scope.
+[0;90m          at: GDScript::reload (res://scripts/world.gd:25)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/world.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
