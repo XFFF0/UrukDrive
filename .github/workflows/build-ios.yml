@@ -19,10 +19,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Select Xcode 16
+      - name: Select Xcode 16.4
         run: |
-          sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
-          sudo xcodebuild -runFirstLaunch
+          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
+          xcodebuild -version
 
       - name: Diagnose available Xcode/SDKs
         run: |
