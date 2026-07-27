@@ -1,0 +1,93 @@
+name: Build unsigned iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+env:
+  GODOT_VERSION: "4.3"
+
+jobs:
+  build-ios:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 16
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+
+      - name: Cache Godot editor + export templates
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot-editor
+            ~/Library/Application Support/Godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-macos
+
+      - name: Download Godot editor (headless export tool)
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/godot-editor
+          curl -L -o /tmp/godot.zip \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
+          unzip -q /tmp/godot.zip -d ~/godot-editor
+
+      - name: Download export templates
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p "$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
+          curl -L -o /tmp/templates.tpz \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q /tmp/templates.tpz -d /tmp/templates
+          cp -R /tmp/templates/templates/* \
+            "$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable/"
+
+      - name: Import project resources
+        run: |
+          GODOT_BIN=$(find ~/godot-editor -name "Godot*" -type f | head -n1)
+          chmod +x "$GODOT_BIN"
+          "$GODOT_BIN" --headless --import --path "$GITHUB_WORKSPACE" || true
+
+      - name: Export Xcode project (unsigned)
+        run: |
+          GODOT_BIN=$(find ~/godot-editor -name "Godot*" -type f | head -n1)
+          mkdir -p build
+          "$GODOT_BIN" --headless --export-release "iOS" build/UrukDrive.ipa --path "$GITHUB_WORKSPACE"
+
+      - name: Build .app via xcodebuild (no signing) and repackage as IPA
+        run: |
+          cd build
+          XCODE_PROJ=$(find . -maxdepth 2 -name "*.xcodeproj" | head -n1)
+          xcodebuild -project "$XCODE_PROJ" \
+            -scheme "UrukDrive" \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+
+          APP_PATH=$(find . -name "*.app" -type d | head -n1)
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r UrukDrive-unsigned.ipa Payload
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: UrukDrive-unsigned-ipa
+          path: build/UrukDrive-unsigned.ipa
+          retention-days: 14
+
+      - name: Commit build log to orphan branch
+        if: always()
+        run: |
+          git checkout --orphan build-logs-$(date +%s)
+          git rm -rf . || true
+          echo "Build run: $GITHUB_RUN_ID at $(date -u)" > build-log.txt
+          git add build-log.txt
+          git -c user.name="ci-bot" -c user.email="ci@local" commit -m "Build log ${GITHUB_RUN_ID}"
+          git push origin HEAD:refs/heads/build-logs-${GITHUB_RUN_ID} || true

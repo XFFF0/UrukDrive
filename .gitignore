@@ -1,0 +1,6 @@
+.godot/
+.import/
+export.cfg
+build/
+*.ipa
+.DS_Store
