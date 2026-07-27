@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 env:
   GODOT_VERSION: "4.3"
 
@@ -63,28 +66,16 @@ jobs:
           echo "EXPORT_EXIT_CODE=${PIPESTATUS[0]}" >> build/export.log
           exit "${PIPESTATUS[0]}"
 
-      - name: Build .app via xcodebuild (no signing) and repackage as IPA
+      - name: Verify IPA was produced
         run: |
-          cd build
-          XCODE_PROJ=$(find . -maxdepth 2 -name "*.xcodeproj" | head -n1)
-          xcodebuild -project "$XCODE_PROJ" \
-            -scheme "UrukDrive" \
-            -sdk iphoneos \
-            -configuration Release \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            build
-
-          APP_PATH=$(find . -name "*.app" -type d | head -n1)
-          mkdir -p Payload
-          cp -R "$APP_PATH" Payload/
-          zip -r UrukDrive-unsigned.ipa Payload
+          ls -la build/
+          test -f build/UrukDrive.ipa || (echo "::error::UrukDrive.ipa was not produced by the export step" && exit 1)
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: UrukDrive-unsigned-ipa
-          path: build/UrukDrive-unsigned.ipa
+          path: build/UrukDrive.ipa
           retention-days: 14
 
       - name: Commit build log to orphan branch
