@@ -48,15 +48,20 @@ jobs:
 
       - name: Import project resources
         run: |
+          mkdir -p build
           GODOT_BIN=$(find ~/godot-editor -name "Godot*" -type f | head -n1)
+          echo "Resolved GODOT_BIN=$GODOT_BIN" | tee build/import.log
           chmod +x "$GODOT_BIN"
-          "$GODOT_BIN" --headless --import --path "$GITHUB_WORKSPACE" || true
+          "$GODOT_BIN" --headless --import --path "$GITHUB_WORKSPACE" 2>&1 | tee -a build/import.log || true
 
       - name: Export Xcode project (unsigned)
         run: |
           GODOT_BIN=$(find ~/godot-editor -name "Godot*" -type f | head -n1)
           mkdir -p build
-          "$GODOT_BIN" --headless --export-release "iOS" build/UrukDrive.ipa --path "$GITHUB_WORKSPACE"
+          set +e
+          "$GODOT_BIN" --headless --export-release "iOS" build/UrukDrive.ipa --path "$GITHUB_WORKSPACE" 2>&1 | tee build/export.log
+          echo "EXPORT_EXIT_CODE=${PIPESTATUS[0]}" >> build/export.log
+          exit "${PIPESTATUS[0]}"
 
       - name: Build .app via xcodebuild (no signing) and repackage as IPA
         run: |
@@ -85,9 +90,14 @@ jobs:
       - name: Commit build log to orphan branch
         if: always()
         run: |
-          git checkout --orphan build-logs-$(date +%s)
-          git rm -rf . || true
-          echo "Build run: $GITHUB_RUN_ID at $(date -u)" > build-log.txt
-          git add build-log.txt
+          BRANCH="build-logs-${GITHUB_RUN_ID}"
+          mkdir -p /tmp/logbranch
+          cp build/import.log /tmp/logbranch/ 2>/dev/null || echo "no import.log" > /tmp/logbranch/import.log
+          cp build/export.log /tmp/logbranch/ 2>/dev/null || echo "no export.log" > /tmp/logbranch/export.log
+          echo "Build run: $GITHUB_RUN_ID at $(date -u)" > /tmp/logbranch/build-log.txt
+          git checkout --orphan "$BRANCH"
+          git rm -rf . > /dev/null 2>&1 || true
+          cp /tmp/logbranch/* .
+          git add build-log.txt import.log export.log
           git -c user.name="ci-bot" -c user.email="ci@local" commit -m "Build log ${GITHUB_RUN_ID}"
-          git push origin HEAD:refs/heads/build-logs-${GITHUB_RUN_ID} || true
+          git push origin HEAD:refs/heads/"$BRANCH" || true
