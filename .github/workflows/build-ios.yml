@@ -20,7 +20,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+          sudo xcodebuild -runFirstLaunch
 
       - name: Diagnose available Xcode/SDKs
         run: |
