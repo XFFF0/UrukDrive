@@ -72,25 +72,48 @@ jobs:
           chmod +x "$GODOT_BIN"
           "$GODOT_BIN" --headless --import --path "$GITHUB_WORKSPACE" 2>&1 | tee -a build/import.log || true
 
-      - name: Export Xcode project (unsigned)
+      - name: Export Xcode project (project only, no auto-archive)
         run: |
           GODOT_BIN=$(find ~/godot-editor -name "Godot*" -type f | head -n1)
           mkdir -p build
           set +e
-          "$GODOT_BIN" --headless --export-release "iOS" build/UrukDrive.ipa --path "$GITHUB_WORKSPACE" 2>&1 | tee build/export.log
+          "$GODOT_BIN" --headless --export-release "iOS" build/UrukDrive.xcodeproj --path "$GITHUB_WORKSPACE" 2>&1 | tee build/export.log
           echo "EXPORT_EXIT_CODE=${PIPESTATUS[0]}" >> build/export.log
           exit "${PIPESTATUS[0]}"
 
-      - name: Verify IPA was produced
+      - name: Build .app with signing forced off, package as unsigned IPA
         run: |
-          ls -la build/
-          test -f build/UrukDrive.ipa || (echo "::error::UrukDrive.ipa was not produced by the export step" && exit 1)
+          set +e
+          cd build
+          xcodebuild -project UrukDrive.xcodeproj \
+            -scheme UrukDrive \
+            -sdk iphoneos \
+            -configuration Release \
+            -derivedDataPath DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM="" \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            build 2>&1 | tee ../build/xcodebuild.log
+          exit "${PIPESTATUS[0]}"
+
+      - name: Package Payload into IPA
+        run: |
+          cd build
+          APP_PATH=$(find DerivedData -name "*.app" -type d | head -n1)
+          test -n "$APP_PATH" || (echo "::error::no .app produced" && exit 1)
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -qr UrukDrive-unsigned.ipa Payload
+          ls -la UrukDrive-unsigned.ipa
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: UrukDrive-unsigned-ipa
-          path: build/UrukDrive.ipa
+          path: build/UrukDrive-unsigned.ipa
           retention-days: 14
 
       - name: Commit build log to orphan branch
@@ -101,10 +124,11 @@ jobs:
           cp build/import.log /tmp/logbranch/ 2>/dev/null || echo "no import.log" > /tmp/logbranch/import.log
           cp build/export.log /tmp/logbranch/ 2>/dev/null || echo "no export.log" > /tmp/logbranch/export.log
           cp build/diag.log /tmp/logbranch/ 2>/dev/null || echo "no diag.log" > /tmp/logbranch/diag.log
+          cp build/xcodebuild.log /tmp/logbranch/ 2>/dev/null || echo "no xcodebuild.log" > /tmp/logbranch/xcodebuild.log
           echo "Build run: $GITHUB_RUN_ID at $(date -u)" > /tmp/logbranch/build-log.txt
           git checkout --orphan "$BRANCH"
           git rm -rf . > /dev/null 2>&1 || true
           cp /tmp/logbranch/* .
-          git add build-log.txt import.log export.log diag.log
+          git add build-log.txt import.log export.log diag.log xcodebuild.log
           git -c user.name="ci-bot" -c user.email="ci@local" commit -m "Build log ${GITHUB_RUN_ID}"
           git push origin HEAD:refs/heads/"$BRANCH" || true
