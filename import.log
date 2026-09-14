@@ -1,0 +1,7 @@
+Resolved GODOT_BIN=/Users/runner/godot-editor/Godot.app/Contents/MacOS/Godot
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Value of type "Callable" cannot be assigned to a variable of type "bool".
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:61)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/touch_controls.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
