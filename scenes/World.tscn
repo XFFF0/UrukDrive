@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/camera_rig.gd" id="2"]
@@ -7,10 +7,31 @@
 [ext_resource type="PackedScene" path="res://scenes/TouchControls.tscn" id="5"]
 
 [sub_resource type="BoxMesh" id="GroundMesh"]
-size = Vector3(120, 1, 120)
+size = Vector3(160, 1, 160)
 
 [sub_resource type="BoxShape3D" id="GroundShape"]
-size = Vector3(120, 1, 120)
+size = Vector3(160, 1, 160)
+
+[sub_resource type="StandardMaterial3D" id="GrassMat"]
+albedo_color = Color(0.24, 0.42, 0.2, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="AsphaltMat"]
+albedo_color = Color(0.1, 0.1, 0.11, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="SidewalkMat"]
+albedo_color = Color(0.72, 0.7, 0.65, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="LineMat"]
+albedo_color = Color(0.95, 0.85, 0.2, 1)
+emission_enabled = true
+emission = Color(0.8, 0.7, 0.15, 1)
+
+[sub_resource type="StandardMaterial3D" id="BuildingMat"]
+albedo_color = Color(0.55, 0.52, 0.5, 1)
+roughness = 0.85
 
 [node name="World" type="Node3D"]
 script = ExtResource("1")
@@ -23,44 +44,126 @@ shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("GroundMesh")
+surface_material_override/0 = SubResource("GrassMat")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("GroundShape")
 
+[node name="Roads" type="Node3D" parent="."]
+
+[node name="RoadEW" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+size = Vector3(160, 0.1, 14)
+material = SubResource("AsphaltMat")
+
+[node name="RoadNS" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+size = Vector3(14, 0.1, 160)
+material = SubResource("AsphaltMat")
+
+[node name="SidewalkN" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -8.5)
+size = Vector3(160, 0.2, 2)
+material = SubResource("SidewalkMat")
+
+[node name="SidewalkS" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 8.5)
+size = Vector3(160, 0.2, 2)
+material = SubResource("SidewalkMat")
+
+[node name="SidewalkE" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.1, 0)
+size = Vector3(2, 0.2, 160)
+material = SubResource("SidewalkMat")
+
+[node name="SidewalkW" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.1, 0)
+size = Vector3(2, 0.2, 160)
+material = SubResource("SidewalkMat")
+
+[node name="LaneEW1" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0.11, 0)
+size = Vector3(6, 0.02, 0.3)
+material = SubResource("LineMat")
+
+[node name="LaneEW2" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.11, 0)
+size = Vector3(6, 0.02, 0.3)
+material = SubResource("LineMat")
+
+[node name="LaneEW3" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.11, 0)
+size = Vector3(6, 0.02, 0.3)
+material = SubResource("LineMat")
+
+[node name="LaneEW4" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0.11, 0)
+size = Vector3(6, 0.02, 0.3)
+material = SubResource("LineMat")
+
+[node name="LaneNS1" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11, -40)
+size = Vector3(0.3, 0.02, 6)
+material = SubResource("LineMat")
+
+[node name="LaneNS2" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11, -20)
+size = Vector3(0.3, 0.02, 6)
+material = SubResource("LineMat")
+
+[node name="LaneNS3" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11, 20)
+size = Vector3(0.3, 0.02, 6)
+material = SubResource("LineMat")
+
+[node name="LaneNS4" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11, 40)
+size = Vector3(0.3, 0.02, 6)
+material = SubResource("LineMat")
+
 [node name="CityBlocks" type="Node3D" parent="."]
 
 [node name="Building1" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, -20)
-size = Vector3(10, 8, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, -35)
+size = Vector3(16, 10, 16)
+material = SubResource("BuildingMat")
 
 [node name="Building2" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 6, -20)
-size = Vector3(12, 12, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 7, -35)
+size = Vector3(18, 14, 18)
+material = SubResource("BuildingMat")
 
 [node name="Building3" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3, 20)
-size = Vector3(8, 6, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 4, 35)
+size = Vector3(14, 8, 20)
+material = SubResource("BuildingMat")
 
 [node name="Building4" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 9, 20)
-size = Vector3(14, 18, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 10, 35)
+size = Vector3(20, 20, 20)
+material = SubResource("BuildingMat")
 
 [node name="Building5" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -35)
-size = Vector3(20, 10, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, -35)
+size = Vector3(10, 8, 12)
+material = SubResource("BuildingMat")
+
+[node name="Building6" type="CSGBox3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 6, 35)
+size = Vector3(12, 12, 10)
+material = SubResource("BuildingMat")
 
 [node name="Player" parent="." instance=ExtResource("3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 20)
 
 [node name="Vehicle" parent="." instance=ExtResource("4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 20)
 
 [node name="CameraRig" type="Node3D" parent="."]
 script = ExtResource("2")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraRig"]
 spring_length = 6.0
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig/SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)

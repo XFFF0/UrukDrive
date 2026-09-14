@@ -1,17 +1,25 @@
 extends Node
-## Autoload singleton (register as "InputState" in Project Settings > Autoload).
-## Bridges on-screen touch controls with gameplay scripts, since GTA-style
-## mobile games rely on virtual joysticks/buttons rather than a keyboard.
+## Autoload singleton (registered as "InputState"). Bridges on-screen touch
+## controls with gameplay scripts.
 
-var move_vector: Vector2 = Vector2.ZERO      # from the left virtual joystick
-var look_vector: Vector2 = Vector2.ZERO      # from right-side drag (camera look)
-var throttle: float = 0.0                    # 0..1 accelerator button
-var braking: bool = false                    # brake button held
-var steer: float = 0.0                       # -1..1 steering slider
-var interact_pressed: bool = false           # enter/exit vehicle button (one-shot)
+var move_vector: Vector2 = Vector2.ZERO
+var look_vector: Vector2 = Vector2.ZERO
+var throttle: float = 0.0
+var braking: bool = false
+var steer: float = 0.0
+var interact_pressed: bool = false
+var fire_pressed: bool = false
 
 func consume_interact() -> bool:
 	if interact_pressed:
 		interact_pressed = false
 		return true
 	return false
+
+func consume_fire() -> bool:
+	if fire_pressed:
+		fire_pressed = false
+		return true
+	return false
+
+var objective_distance: float = -1.0
