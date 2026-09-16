@@ -23,10 +23,11 @@ InputState="*res://scripts/input_state.gd"
 
 [display]
 
-window/size/viewport_width=1170
-window/size/viewport_height=2532
+window/size/viewport_width=2532
+window/size/viewport_height=1170
 window/handheld/orientation="landscape"
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 

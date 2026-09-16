@@ -48,7 +48,7 @@ func _handle_fire() -> void:
 	var to: Vector3 = from + (-camera.global_transform.basis.z).normalized() * FIRE_RANGE
 	var space_state := get_world_3d().direct_space_state
 	var query := PhysicsRayQueryParameters3D.create(from, to)
-	query.exclude = [player, vehicle]
+	query.exclude = [player.get_rid(), vehicle.get_rid()]
 	var result: Dictionary = space_state.intersect_ray(query)
 
 	var hit_point: Vector3 = to
