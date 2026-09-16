@@ -1,0 +1,194 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+export: begin: Exporting for iOS steps: 5
+	export: step 0: Making .pck
+savepack: begin: Packing steps: 102
+	savepack: step 2: Storing File: res://.godot/exported/133200997/export-298342078e44d9a209a1f8421d629c50-default_env.res
+	savepack: step 10: Storing File: res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex
+	savepack: step 10: Storing File: res://assets/icon.svg.import
+	savepack: step 18: Storing File: res://.godot/exported/133200997/export-e8220e74d1354b9e6b168b513689419c-Player.scn
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Cannot use subscript operator on a base of type "null".
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:87)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Cannot use subscript operator on a base of type "null".
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:88)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Cannot use subscript operator on a base of type "null".
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:89)[0m
+[1;35mSCRIPT ERROR:[0;95m Parse Error: Cannot use subscript operator on a base of type "null".
+[0;90m          at: GDScript::reload (res://scripts/touch_controls.gd:91)[0m
+[1;31mERROR:[0;91m Failed to load script "res://scripts/touch_controls.gd" with error "Parse error".
+[0;90m   at: load (modules/gdscript/gdscript.cpp:2936)[0m
+	savepack: step 27: Storing File: res://.godot/exported/133200997/export-48a05f73766bce7df84b6d2136ef34a2-TouchControls.scn
+	savepack: step 35: Storing File: res://.godot/exported/133200997/export-70cc8bb6c3085214ca2831bedc931203-Vehicle.scn
+	savepack: step 43: Storing File: res://.godot/exported/133200997/export-57a8a85058368be1f5628ef4b8140bf5-World.scn
+	savepack: step 52: Storing File: res://scripts/camera_rig.gdc
+	savepack: step 60: Storing File: res://scripts/input_state.gdc
+	savepack: step 68: Storing File: res://scripts/player.gdc
+	savepack: step 77: Storing File: res://scripts/touch_controls.gdc
+	savepack: step 85: Storing File: res://scripts/vehicle.gdc
+	savepack: step 93: Storing File: res://scripts/world.gdc
+	savepack: step 93: Storing File: res://assets/default_env.tres.remap
+	savepack: step 93: Storing File: res://scenes/Player.tscn.remap
+	savepack: step 93: Storing File: res://scenes/TouchControls.tscn.remap
+	savepack: step 93: Storing File: res://scenes/Vehicle.tscn.remap
+	savepack: step 93: Storing File: res://scenes/World.tscn.remap
+	savepack: step 93: Storing File: res://scripts/camera_rig.gd.remap
+	savepack: step 93: Storing File: res://scripts/input_state.gd.remap
+	savepack: step 93: Storing File: res://scripts/player.gd.remap
+	savepack: step 93: Storing File: res://scripts/touch_controls.gd.remap
+	savepack: step 93: Storing File: res://scripts/vehicle.gd.remap
+	savepack: step 93: Storing File: res://scripts/world.gd.remap
+	savepack: step 93: Storing File: res://.godot/global_script_class_cache.cfg
+	savepack: step 93: Storing File: res://assets/icon.svg
+	savepack: step 93: Storing File: res://.godot/uid_cache.bin
+	savepack: step 93: Storing File: res://project.binary
+savepack: end
+	export: step 1: Extracting and configuring Xcode project
+Static framework: libgodot.ios.release.xcframework
+Unzipping...
+READ: data.pck
+READ: godot_ios/
+READ: godot_ios/Images.xcassets/
+READ: godot_ios/Images.xcassets/SplashImage.imageset/
+READ: godot_ios/Images.xcassets/SplashImage.imageset/Contents.json
+ADDING: UrukDrive/Images.xcassets/SplashImage.imageset/Contents.json size: 343
+Creating build/UrukDrive/Images.xcassets/SplashImage.imageset
+READ: godot_ios/Images.xcassets/SplashImage.imageset/splash@2x.png
+ADDING: UrukDrive/Images.xcassets/SplashImage.imageset/splash@2x.png size: 14779
+READ: godot_ios/Images.xcassets/SplashImage.imageset/splash@3x.png
+ADDING: UrukDrive/Images.xcassets/SplashImage.imageset/splash@3x.png size: 14779
+READ: godot_ios/dylibs/
+READ: godot_ios/dylibs/empty
+ADDING: UrukDrive/dylibs/empty size: 42
+Creating build/UrukDrive/dylibs
+READ: godot_ios/en.lproj/
+READ: godot_ios/en.lproj/InfoPlist.strings
+ADDING: UrukDrive/en.lproj/InfoPlist.strings size: 44
+Creating build/UrukDrive/en.lproj
+READ: godot_ios/Launch Screen.storyboard
+ADDING: UrukDrive/Launch Screen.storyboard size: 3023
+READ: godot_ios/dummy.cpp
+ADDING: UrukDrive/dummy.cpp size: 2449
+READ: godot_ios/dummy.h
+ADDING: UrukDrive/dummy.h size: 2271
+READ: godot_ios/dummy.swift
+ADDING: UrukDrive/dummy.swift size: 2252
+READ: godot_ios/export_options.plist
+ADDING: UrukDrive/export_options.plist size: 466
+READ: godot_ios/godot_ios-Info.plist
+ADDING: UrukDrive/UrukDrive-Info.plist size: 1816
+READ: godot_ios/godot_ios.entitlements
+ADDING: UrukDrive/UrukDrive.entitlements size: 190
+READ: godot_ios.xcodeproj/
+READ: godot_ios.xcodeproj/project.xcworkspace/
+READ: godot_ios.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ADDING: UrukDrive.xcodeproj/project.xcworkspace/contents.xcworkspacedata size: 155
+Creating build/UrukDrive.xcodeproj/project.xcworkspace
+READ: godot_ios.xcodeproj/xcshareddata/
+READ: godot_ios.xcodeproj/xcshareddata/xcschemes/
+READ: godot_ios.xcodeproj/xcshareddata/xcschemes/godot_ios.xcscheme
+ADDING: UrukDrive.xcodeproj/xcshareddata/xcschemes/UrukDrive.xcscheme size: 3456
+Creating build/UrukDrive.xcodeproj/xcshareddata/xcschemes
+READ: godot_ios.xcodeproj/project.pbxproj
+ADDING: UrukDrive.xcodeproj/project.pbxproj size: 15346
+READ: libgodot.ios.debug.xcframework/
+READ: libgodot.ios.debug.xcframework/Info.plist
+READ: libgodot.ios.debug.xcframework/ios-arm64_x86_64-simulator/
+READ: libgodot.ios.debug.xcframework/ios-arm64_x86_64-simulator/empty
+READ: libgodot.ios.debug.xcframework/ios-arm64_x86_64-simulator/libgodot.a
+READ: libgodot.ios.debug.xcframework/ios-arm64/
+READ: libgodot.ios.debug.xcframework/ios-arm64/empty
+READ: libgodot.ios.debug.xcframework/ios-arm64/libgodot.a
+READ: libgodot.ios.release.xcframework/
+READ: libgodot.ios.release.xcframework/Info.plist
+ADDING: UrukDrive.xcframework/Info.plist size: 1028
+Creating build/UrukDrive.xcframework
+READ: libgodot.ios.release.xcframework/ios-arm64/
+READ: libgodot.ios.release.xcframework/ios-arm64/empty
+READ: libgodot.ios.release.xcframework/ios-arm64/libgodot.a
+ADDING: UrukDrive.xcframework/ios-arm64/libgodot.a size: 141376624
+Creating build/UrukDrive.xcframework/ios-arm64
+READ: libgodot.ios.release.xcframework/ios-arm64_x86_64-simulator/
+READ: libgodot.ios.release.xcframework/ios-arm64_x86_64-simulator/empty
+READ: libgodot.ios.release.xcframework/ios-arm64_x86_64-simulator/libgodot.a
+ADDING: UrukDrive.xcframework/ios-arm64_x86_64-simulator/libgodot.a size: 147205288
+Creating build/UrukDrive.xcframework/ios-arm64_x86_64-simulator
+READ: MoltenVK.xcframework/
+READ: MoltenVK.xcframework/ios-arm64_x86_64-maccatalyst/
+READ: MoltenVK.xcframework/ios-arm64_x86_64-maccatalyst/libMoltenVK.a
+ADDING: MoltenVK.xcframework/ios-arm64_x86_64-maccatalyst/libMoltenVK.a size: 20366392
+Creating build/MoltenVK.xcframework/ios-arm64_x86_64-maccatalyst
+READ: MoltenVK.xcframework/Info.plist
+ADDING: MoltenVK.xcframework/Info.plist size: 2834
+READ: MoltenVK.xcframework/ios-arm64/
+READ: MoltenVK.xcframework/ios-arm64/libMoltenVK.a
+ADDING: MoltenVK.xcframework/ios-arm64/libMoltenVK.a size: 9611272
+Creating build/MoltenVK.xcframework/ios-arm64
+READ: MoltenVK.xcframework/ios-arm64_x86_64-simulator/
+READ: MoltenVK.xcframework/ios-arm64_x86_64-simulator/libMoltenVK.a
+ADDING: MoltenVK.xcframework/ios-arm64_x86_64-simulator/libMoltenVK.a size: 20264336
+Creating build/MoltenVK.xcframework/ios-arm64_x86_64-simulator
+READ: PrivacyInfo.xcprivacy
+ADDING: PrivacyInfo.xcprivacy size: 990
+Export: ARM64 simulator library, generating from device library.
+[1;33mWARNING:[0;93m Export Icons: Icon (icons/app_store_1024x1024) must be opaque.
+[0;90m     at: add_message (editor/export/editor_export_platform.h:179)[0m
+Exporting launch screen storyboard
+Exporting additional assets
+	export: step 2: Code-signing dylibs
+	export: step 3: Making .xcarchive
+xcodebuild (.xcarchive):
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project build/UrukDrive.xcodeproj -scheme UrukDrive -sdk iphoneos -configuration Release -destination generic/platform=iOS archive -allowProvisioningUpdates -archivePath build/UrukDrive.xcarchive
+
+Build settings from command line:
+    SDKROOT = iphoneos18.5
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'UrukDrive' in project 'UrukDrive' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c++ -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+Build description signature: a0a5234e3600c47b018b05578a60f3b7
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/UrukDrive-goalrhfihjhnrvdwwhmsgnqvndzg/Build/Intermediates.noindex/ArchiveIntermediates/UrukDrive/IntermediateBuildFilesPath/XCBuildData/a0a5234e3600c47b018b05578a60f3b7.xcbuilddata
+/Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj: error: UrukDrive has conflicting provisioning settings. UrukDrive is automatically signed for development, but a conflicting code signing identity iPhone Distribution has been manually specified. Set the code signing identity value to "Apple Development" in the build settings editor, or switch to manual signing in the Signing & Capabilities editor. (in target 'UrukDrive' from project 'UrukDrive')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving project UrukDrive with scheme UrukDrive
+(1 failure)
+
+[1;31mERROR:[0;91m Xcode Build: Xcode project build failed, see editor log for details.
+[0;90m   at: add_message (editor/export/editor_export_platform.h:182)[0m
+export: end
+[1;31mERROR:[0;91m Project export for preset "iOS" failed.
+[0;90m   at: _fs_changed (editor/editor_node.cpp:1028)[0m
+EXPORT_EXIT_CODE=1
