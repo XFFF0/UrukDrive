@@ -1,0 +1,317 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project UrukDrive.xcodeproj -scheme UrukDrive -sdk iphoneos -configuration Release -derivedDataPath DerivedData CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= PROVISIONING_PROFILE_SPECIFIER= build
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = 
+    CODE_SIGN_STYLE = Manual
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+    DEVELOPMENT_TEAM = 
+    PROVISIONING_PROFILE_SPECIFIER = 
+    SDKROOT = iphoneos18.5
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:b45f4a3e07e3a4c9b09a92337bd5a44d266d1222, name:My Mac }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:EFC27B51-A1AC-4C44-A0CE-43F84B5F0B68, OS:2.3, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:136F9422-A9E1-4C19-88AF-45BB818E37BB, OS:2.4, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:0C5BF083-23A9-419B-9CBD-8E2AA7E26265, OS:2.5, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:EB17C5F7-7C10-47FF-9344-F550DB0D244F, OS:26.1, name:Apple Vision Pro }
+{ platform:visionOS Simulator, arch:arm64, variant:Designed for [iPad,iPhone], id:62E72748-B3EC-4F87-AAD9-DE47D54B7B63, OS:26.2, name:Apple Vision Pro }
+{ platform:iOS Simulator, arch:arm64, id:B7718686-AA2A-4157-8E04-7FA4AE6F7BD0, OS:18.5, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:FF8C8404-A040-4C69-BE4F-258FA2571EA2, OS:18.6, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:5A7C2682-DC41-42B4-A065-6477314C6107, OS:26.0.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:388BAFD3-DA76-4ACF-AB96-CB8111ABF99E, OS:26.1, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:AC7BF8FD-BAB0-4374-A4F7-52ABA082B92E, OS:26.2, name:iPad (10th generation) }
+{ platform:iOS Simulator, arch:arm64, id:7222C0FB-7BCD-457A-AD32-76C948D2602F, OS:18.5, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:458323E3-9E85-4764-B868-F02CE9C4ADF0, OS:18.6, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:3869DFDE-0197-4B91-915D-90B3D279FE15, OS:26.0.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:BAD1706E-E13F-444D-B19F-C7A451E7774A, OS:26.1, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:E1D34F4A-69A6-4E07-8C9F-D5E775E2A416, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:FB985C96-A632-42FC-A064-57F80EA1A0AF, OS:18.5, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6CE4BAD1-E547-4D95-B130-FBCDCE49282B, OS:18.6, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:5DCA7372-1294-4245-AADE-E9938CC9119F, OS:26.0.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:B5D41CE2-3444-4312-8351-5A2B58E90C26, OS:26.1, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:28EB6DDD-01F7-42F7-B1FF-56CC398818EB, OS:26.2, name:iPad Air 11-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:238ABD15-A231-49EB-9A8E-2A18835D05E4, OS:18.5, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:A1F6F219-8660-4BC0-B7E9-17BEE98456F5, OS:18.6, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:244E1618-3993-4A44-B213-FA496A601843, OS:26.0.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:5DE60B78-C540-4CAE-BF3B-D31601C7ABBB, OS:26.1, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:EF008AE9-B743-4A49-A8AD-A27FD9CCAE52, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:DEC44A2A-1119-4A2D-89C9-0A7E48485C1E, OS:18.5, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6AF871A0-5FC9-4DA0-92D3-D60A3F3986E0, OS:18.6, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:DC7ED953-B711-4AC8-A414-A7008BA50DAD, OS:26.0.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:D3B307C6-3981-42AF-9708-E15A72BECF2D, OS:26.1, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:6235A74F-E996-4A4A-B5B9-91A8A87F50EE, OS:26.2, name:iPad Air 13-inch (M2) }
+{ platform:iOS Simulator, arch:arm64, id:9747906A-4708-4563-B8B9-1FE571CEA8C5, OS:18.5, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:24D6FA4F-CB44-41E0-B6E8-91374A95E4CA, OS:18.6, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:1262447B-91B2-4C0C-90E8-36537D183683, OS:26.0.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:40C16C1A-5BA0-41C6-99A5-355F9CBACD9F, OS:26.1, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:8C025F3C-2545-40A5-AC87-FF534DB84D42, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:2EDB2671-090C-4988-822E-421879ECE84C, OS:18.5, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:41C766F4-A950-4049-81B8-1B578B5804D8, OS:18.6, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:CE25E477-AAC4-469F-9343-301D5ABCD9BC, OS:26.0.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:38A0995A-759F-417D-ACED-70D43D6DBB82, OS:26.1, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:FABE5896-BAF4-4220-8AFE-C1E31625D4DC, OS:26.2, name:iPad Pro 11-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:07E2DE8A-D138-4013-A250-9EDE31AAB9DE, OS:26.0.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:165A6108-1D5C-4AFB-94C8-64E25DA3E7B5, OS:26.1, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:93F8D73D-86A4-455D-8E33-EFA55B5760E4, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:AFBB202F-0F39-4DD8-8C47-DAB97D7D9DF2, OS:18.5, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:DD335931-190E-4075-B666-91C698C0CDEC, OS:18.6, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:1A4FA0DD-F5CE-49FF-A6E2-1CAC22BE4C80, OS:26.0.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:380AF256-AA90-49F1-BC8E-618736C734CB, OS:26.1, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:5A602664-A209-462C-9B02-6E51FACDFED6, OS:26.2, name:iPad Pro 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:7EBB23D5-64E2-4DDB-B24F-86C16A07ED26, OS:26.0.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:B673CC61-F30B-479A-9672-FA680127EE1F, OS:26.1, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:0DE52589-6E0B-47D4-B4A7-7E4E3D9C1049, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:773C1AA1-17A9-4EC1-8BE5-D4BB00DF3AC1, OS:18.5, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:417FB14E-FFC0-4FB1-B6D6-BA85C2FFC3D5, OS:18.6, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:B12E6DD0-E867-4D26-BFBA-2BD9C3D55DBD, OS:26.0.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:CFF66741-12D5-44BF-BABB-29622D014BE2, OS:26.1, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:9D9BF050-F6F5-4D32-84C0-4B7AC57F63EF, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:F0E646EF-4792-4F36-B48B-EC89B3A6B73B, OS:18.5, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:02010C24-263D-445A-8934-74FE019F15CA, OS:18.6, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:2D9C6CF6-FA7D-4D87-84C4-D5FA503F22B9, OS:26.0.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:6D9FD9BD-F027-4EE5-83A6-BC98ED2603B0, OS:26.1, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:2911FD29-A09E-4A81-BEA7-99A616FB7FC8, OS:26.2, name:iPhone 16 }
+{ platform:iOS Simulator, arch:arm64, id:183F93DA-9B72-40B1-AD0E-287526E4E9D5, OS:18.5, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:102FCD1A-4F6B-4B15-ABA9-774BC75ADB11, OS:18.6, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:2EE15100-41A2-4790-893A-050FC5FE5AA8, OS:26.0.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:C1337AE6-D82D-4C09-B0BA-4437460B306E, OS:26.1, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:CFF67BF1-533D-480D-9A76-F1EADAD339C7, OS:26.2, name:iPhone 16 Plus }
+{ platform:iOS Simulator, arch:arm64, id:DC4CD8B3-4457-4153-9087-A0D7A2F9BFD9, OS:18.5, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:7FF9581C-A82C-472C-B005-492B077D1038, OS:18.6, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:3C00406B-9DB5-4106-B5FD-132C84BF188A, OS:26.0.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:3F7F71D8-9EE4-4B63-84A8-6EBD0C5017BE, OS:26.1, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:291E4B86-C951-41A7-8327-84BF0304D0A9, OS:26.2, name:iPhone 16 Pro }
+{ platform:iOS Simulator, arch:arm64, id:F1218AE5-3D29-4CE5-9D0F-6F21CEAA502C, OS:18.5, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:BAE7F30B-6707-4BF4-8375-FE75C94DD2FA, OS:18.6, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:E1605B84-CF5A-4193-878D-3623BD8B90AE, OS:26.0.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:920BDAA4-BD69-4998-9337-3B06B2C584F4, OS:26.1, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:9F3D563E-AF8A-4089-B32E-3ADADEB067F0, OS:26.2, name:iPhone 16 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:8CBC396B-9510-42FF-AC70-614F5BD0FC86, OS:18.6, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:4118C2C1-7E78-41EB-B816-3C75C7076F1E, OS:26.0.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:A1D6E20D-5C3F-46E8-88C8-9A88DB2C1D0E, OS:26.1, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:1ECD563C-BBBB-42E5-9A9F-648809113BF6, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:003F24D4-BA1A-4D48-A26E-C14D511E7472, OS:26.0.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:3D025AD9-C9BB-46A3-BCB4-B84F592C53A0, OS:26.1, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:22970779-4A47-463E-8B6D-CC012359B320, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:517BAAA1-7BAB-4B50-8B25-04EF0238019B, OS:26.0.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:DBAE96AF-90B5-4387-B859-66348EF015C7, OS:26.1, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:E952A9B0-CC78-435C-BF08-06AD47FE1076, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:CA359E70-5E9C-400C-A7E1-34013F7B088A, OS:26.0.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:1BF1F2D9-05B4-4B31-BE19-1031B4A0EA80, OS:26.1, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:4C675116-265D-488F-BFFA-836A4545674C, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:AB0FB058-2DF8-4824-A382-91FE8566B342, OS:26.0.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:55DF797C-6847-4575-ABFA-4E2A08520774, OS:26.1, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:1CE1A334-F45C-4216-823B-EE5E6389838F, OS:26.2, name:iPhone Air }
+{ platform:iOS Simulator, arch:arm64, id:22A3039C-6A45-47F4-82D4-80C58CA94379, OS:18.5, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:8938AAA2-76B5-4D49-A228-383499B04C02, OS:18.6, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:F3967A6C-63E1-4323-9EA7-6C26D42F77A3, OS:26.0.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:3EF44343-CDF7-4757-BAE2-47B813D8FF60, OS:26.1, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, arch:arm64, id:48B2DA2E-AF18-4E36-BB25-B25969A4EBCF, OS:26.2, name:iPhone SE (3rd generation) }
+note: Using codesigning identity override: 
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'UrukDrive' in project 'UrukDrive' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c++ -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+Build description signature: 300b60ca088271275099776e880ee70a
+Build description path: /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata
+CreateBuildDirectory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-create-build-directory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products
+
+CreateBuildDirectory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-create-build-directory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -o /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+
+CreateBuildDirectory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-create-build-directory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive-502df487ef7d6cbb1c2278caa8f0f1e0-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive-502df487ef7d6cbb1c2278caa8f0f1e0-VFS-iphoneos/all-product-headers.yaml
+
+CreateBuildDirectory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-create-build-directory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+
+ProcessXCFramework /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcframework /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/libgodot.a ios
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-process-xcframework --xcframework /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcframework --platform ios --target-path /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos
+
+ProcessXCFramework /Users/runner/work/UrukDrive/UrukDrive/build/MoltenVK.xcframework /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/libMoltenVK.a ios
+    cd /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.xcodeproj
+    builtin-process-xcframework --xcframework /Users/runner/work/UrukDrive/UrukDrive/build/MoltenVK.xcframework --platform ios --target-path /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.DependencyStaticMetadataFileList (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.DependencyMetadataFileList (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-project-headers.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-own-target-headers.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-generated-files.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-all-target-headers.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-all-non-framework-target-headers.hmap (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/UrukDrive.LinkFileList (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/UrukDrive.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    write-file /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp
+-target arm64-apple-ios12.0 '-std=gnu++11' '-stdlib=libc++' -fmodules -fno-cxx-modules -gmodules '-fmodules-cache-path=/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/ModuleCache.noindex' -fpascal-strings -Os -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -g '-fvisibility=hidden' -fvisibility-inlines-hidden -iquote /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-generated-files.hmap -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-own-target-headers.hmap -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-all-target-headers.hmap -iquote /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/UrukDrive-project-headers.hmap -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/include -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources-normal/arm64 -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources/arm64 -I/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources -F/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos -F. -FDerivedData -FMoltenVK.xcframework -FUrukDrive -FUrukDrive.xcframework -FDerivedData/Build -FDerivedData/Logs -FMoltenVK.xcframework/ios-arm64 -FMoltenVK.xcframework/ios-arm64_x86_64-maccatalyst -FMoltenVK.xcframework/ios-arm64_x86_64-simulator -FUrukDrive/dylibs -FUrukDrive.xcframework/ios-arm64 -FUrukDrive.xcframework/ios-arm64_x86_64-simulator -FDerivedData/Build/Intermediates.noindex -FDerivedData/Logs/Build -FDerivedData/Logs/Launch -FDerivedData/Logs/Localization -FDerivedData/Logs/Package -FDerivedData/Logs/Test -FDerivedData/Build/Intermediates.noindex/XCBuildData -FDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache -FDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata/attachments -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/project -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/target -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace
+
+MkDir /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /bin/mkdir -p /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app
+
+MkDir /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/unthinned (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /bin/mkdir -p /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/unthinned
+
+MkDir /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /bin/mkdir -p /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets --compile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_dependencies --output-partial-info-plist /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 12.0 --platform iphoneos --bundle-identifier com.xfff0.urukdrive --generate-objc-asset-symbols /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/DerivedSources/GeneratedAssetSymbols.h
+
+
+CpResource /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/UrukDrive.pck /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.pck (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive.pck /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app
+
+CpResource /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/PrivacyInfo.xcprivacy /Users/runner/work/UrukDrive/UrukDrive/build/PrivacyInfo.xcprivacy (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/runner/work/UrukDrive/UrukDrive/build/PrivacyInfo.xcprivacy /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app
+
+CopyStringsFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/en.lproj/InfoPlist.strings /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/en.lproj/InfoPlist.strings (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-copyStrings --validate --outputencoding binary --outfilename InfoPlist.strings --outdir /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/en.lproj -- /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/en.lproj/InfoPlist.strings
+/Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/en.lproj/InfoPlist.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'UrukDrive' from project 'UrukDrive')
+
+CompileStoryboard /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Launch\ Screen.storyboard (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module UrukDrive --output-partial-info-plist /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Launch\ Screen-SBPartialInfo.plist --auto-activate-custom-fonts --target-device iphone --target-device ipad --minimum-deployment-target 12.0 --output-format human-readable-text /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Launch\ Screen.storyboard --compilation-directory /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build
+
+CompileAssetCatalogVariant thinned /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets --compile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 12.0 --platform iphoneos
+/* com.apple.actool.document.notices */
+/Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][][]: notice: 76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.
+/* com.apple.actool.compilation-results */
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist_thinned
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned/Assets.car
+
+
+CompileC /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/dummy.o /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/dummy.cpp normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    
+    Using response file: /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp
+    
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Werror\=deprecated-objc-isa-usage -Werror\=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -MMD -MT dependencies -MF /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/dummy.d --serialize-diagnostics /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/dummy.dia -c /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/dummy.cpp -o /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/dummy.o
+
+Ld /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/UrukDrive normal (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target arm64-apple-ios12.0 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -Os -L/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -L/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos -L. -LDerivedData -LMoltenVK.xcframework -LUrukDrive -LUrukDrive.xcframework -LDerivedData/Build -LDerivedData/Logs -LMoltenVK.xcframework/ios-arm64 -LMoltenVK.xcframework/ios-arm64_x86_64-maccatalyst -LMoltenVK.xcframework/ios-arm64_x86_64-simulator -LUrukDrive/dylibs -LUrukDrive.xcframework/ios-arm64 -LUrukDrive.xcframework/ios-arm64_x86_64-simulator -LDerivedData/Build/Intermediates.noindex -LDerivedData/Logs/Build -LDerivedData/Logs/Launch -LDerivedData/Logs/Localization -LDerivedData/Logs/Package -LDerivedData/Logs/Test -LDerivedData/Build/Intermediates.noindex/XCBuildData -LDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata -LDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache -LDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata/attachments -LDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/project -LDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/target -LDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -F/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -F/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos -F. -FDerivedData -FMoltenVK.xcframework -FUrukDrive -FUrukDrive.xcframework -FDerivedData/Build -FDerivedData/Logs -FMoltenVK.xcframework/ios-arm64 -FMoltenVK.xcframework/ios-arm64_x86_64-maccatalyst -FMoltenVK.xcframework/ios-arm64_x86_64-simulator -FUrukDrive/dylibs -FUrukDrive.xcframework/ios-arm64 -FUrukDrive.xcframework/ios-arm64_x86_64-simulator -FDerivedData/Build/Intermediates.noindex -FDerivedData/Logs/Build -FDerivedData/Logs/Launch -FDerivedData/Logs/Localization -FDerivedData/Logs/Package -FDerivedData/Logs/Test -FDerivedData/Build/Intermediates.noindex/XCBuildData -FDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache -FDerivedData/Build/Intermediates.noindex/XCBuildData/300b60ca088271275099776e880ee70a.xcbuilddata/attachments -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/project -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/target -FDerivedData/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -filelist /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/UrukDrive.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/UrukDrive_lto.o -Xlinker -dependency_info -Xlinker /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Objects-normal/arm64/UrukDrive_dependency_info.dat -stdlib\=libc++ -lMoltenVK -lgodot -o /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/UrukDrive
+ld: warning: object file (/Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/libMoltenVK.a[2](libMoltenVK.a-arm64-master.o)) was built for newer 'iOS' version (13.0) than being linked (12.0)
+
+LinkStoryboards (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module UrukDrive --target-device iphone --target-device ipad --minimum-deployment-target 12.0 --output-format human-readable-text --link /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Launch\ Screen.storyboardc
+
+LinkAssetCatalog /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/Images.xcassets (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-linkAssetCatalog --thinned /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app --plist-output /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/Assets.car (in target 'UrukDrive' from project 'UrukDrive')
+note: Emplaced /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/AppIcon76x76@2x~ipad.png (in target 'UrukDrive' from project 'UrukDrive')
+note: Emplaced /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/AppIcon60x60@2x.png (in target 'UrukDrive' from project 'UrukDrive')
+
+ProcessInfoPlistFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/Info.plist /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/UrukDrive-Info.plist (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-infoPlistUtility /Users/runner/work/UrukDrive/UrukDrive/build/UrukDrive/UrukDrive-Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/Launch\ Screen-SBPartialInfo.plist -additionalcontentfile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Intermediates.noindex/UrukDrive.build/Release-iphoneos/UrukDrive.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/Info.plist
+
+GenerateDSYMFile /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app.dSYM /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/UrukDrive (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app/UrukDrive -o /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app.dSYM
+
+RegisterExecutionPolicyException /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-RegisterExecutionPolicyException /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app
+
+Validate /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    builtin-validationUtility /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app -validate-for-store -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app (in target 'UrukDrive' from project 'UrukDrive')
+    cd /Users/runner/work/UrukDrive/UrukDrive/build
+    /usr/bin/touch -c /Users/runner/work/UrukDrive/UrukDrive/build/DerivedData/Build/Products/Release-iphoneos/UrukDrive.app
+
+** BUILD SUCCEEDED **
+
