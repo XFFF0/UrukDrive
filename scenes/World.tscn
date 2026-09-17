@@ -5,6 +5,12 @@
 [ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/Vehicle.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/TouchControls.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-a.glb" id="6"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-c.glb" id="7"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-e.glb" id="8"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-g.glb" id="9"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-skyscraper-a.glb" id="10"]
+[ext_resource type="PackedScene" path="res://assets/kenney/city-commercial/building-skyscraper-c.glb" id="11"]
 
 [sub_resource type="BoxMesh" id="GroundMesh"]
 size = Vector3(160, 1, 160)
@@ -33,6 +39,24 @@ emission = Color(0.8, 0.7, 0.15, 1)
 albedo_color = Color(0.55, 0.52, 0.5, 1)
 roughness = 0.85
 
+[sub_resource type="BoxShape3D" id="CollisionG"]
+size = Vector3(4.85, 8.465, 4.61)
+
+[sub_resource type="BoxShape3D" id="CollisionSkyA"]
+size = Vector3(6.8, 14.4, 6.8)
+
+[sub_resource type="BoxShape3D" id="CollisionE"]
+size = Vector3(8.2, 4.465, 5.04)
+
+[sub_resource type="BoxShape3D" id="CollisionSkyC"]
+size = Vector3(6.4, 20.4, 6.94)
+
+[sub_resource type="BoxShape3D" id="CollisionA"]
+size = Vector3(4.418, 6.465, 4.7)
+
+[sub_resource type="BoxShape3D" id="CollisionC"]
+size = Vector3(4.418, 4.465, 5.45)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1")
 
@@ -49,35 +73,41 @@ surface_material_override/0 = SubResource("GrassMat")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("GroundShape")
 
-[node name="Roads" type="Node3D" parent="."]
+[node name="Roads" type="StaticBody3D" parent="."]
 
 [node name="RoadEW" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+use_collision = true
 size = Vector3(160, 0.1, 14)
 material = SubResource("AsphaltMat")
 
 [node name="RoadNS" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+use_collision = true
 size = Vector3(14, 0.1, 160)
 material = SubResource("AsphaltMat")
 
 [node name="SidewalkN" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -8.5)
+use_collision = true
 size = Vector3(160, 0.2, 2)
 material = SubResource("SidewalkMat")
 
 [node name="SidewalkS" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 8.5)
+use_collision = true
 size = Vector3(160, 0.2, 2)
 material = SubResource("SidewalkMat")
 
 [node name="SidewalkE" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.1, 0)
+use_collision = true
 size = Vector3(2, 0.2, 160)
 material = SubResource("SidewalkMat")
 
 [node name="SidewalkW" type="CSGBox3D" parent="Roads"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.1, 0)
+use_collision = true
 size = Vector3(2, 0.2, 160)
 material = SubResource("SidewalkMat")
 
@@ -123,35 +153,59 @@ material = SubResource("LineMat")
 
 [node name="CityBlocks" type="Node3D" parent="."]
 
-[node name="Building1" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, -35)
-size = Vector3(16, 10, 16)
-material = SubResource("BuildingMat")
+[node name="Building1" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 4.2325, -35)
 
-[node name="Building2" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 7, -35)
-size = Vector3(18, 14, 18)
-material = SubResource("BuildingMat")
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building1"]
+shape = SubResource("CollisionG")
 
-[node name="Building3" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 4, 35)
-size = Vector3(14, 8, 20)
-material = SubResource("BuildingMat")
+[node name="Model" parent="CityBlocks/Building1" instance=ExtResource("9")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -4.2325, 0)
 
-[node name="Building4" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 10, 35)
-size = Vector3(20, 20, 20)
-material = SubResource("BuildingMat")
+[node name="Building2" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 7.2, -35)
 
-[node name="Building5" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, -35)
-size = Vector3(10, 8, 12)
-material = SubResource("BuildingMat")
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building2"]
+shape = SubResource("CollisionSkyA")
 
-[node name="Building6" type="CSGBox3D" parent="CityBlocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 6, 35)
-size = Vector3(12, 12, 10)
-material = SubResource("BuildingMat")
+[node name="Model" parent="CityBlocks/Building2" instance=ExtResource("10")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -7.2, 0)
+
+[node name="Building3" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2.2325, 35)
+
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building3"]
+shape = SubResource("CollisionE")
+
+[node name="Model" parent="CityBlocks/Building3" instance=ExtResource("8")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.2325, 0)
+
+[node name="Building4" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 10.2, 35)
+
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building4"]
+shape = SubResource("CollisionSkyC")
+
+[node name="Model" parent="CityBlocks/Building4" instance=ExtResource("11")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -10.2, 0)
+
+[node name="Building5" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3.2325, -35)
+
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building5"]
+shape = SubResource("CollisionA")
+
+[node name="Model" parent="CityBlocks/Building5" instance=ExtResource("6")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -3.2325, 0)
+
+[node name="Building6" type="StaticBody3D" parent="CityBlocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2.2325, 35)
+
+[node name="Collision" type="CollisionShape3D" parent="CityBlocks/Building6"]
+shape = SubResource("CollisionC")
+
+[node name="Model" parent="CityBlocks/Building6" instance=ExtResource("7")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.2325, 0)
 
 [node name="Player" parent="." instance=ExtResource("3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 20)

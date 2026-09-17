@@ -68,7 +68,7 @@ func _is_held(name: String) -> bool:
 			return b["held"]
 	return false
 
-func _button_at(pos: Vector2):
+func _button_at(pos: Vector2) -> Variant:
 	for b in buttons:
 		if b["center"].distance_to(pos) <= BUTTON_RADIUS:
 			return b
